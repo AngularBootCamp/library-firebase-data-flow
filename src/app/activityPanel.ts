@@ -18,7 +18,8 @@ export class ActivityPanelComponent implements OnDestroy {
   constructor(g: Generator) {
     this.handle = setInterval(() => {
       if (this.enabled) {
-        g.next();
+        // void tells tslint that we are intentionally ignoring a promise.
+        void g.next();
         this.n++;
       }
     }, 100);

@@ -16,7 +16,7 @@ export class Generator {
     const name = 'Joe' + Math.floor((Math.random() * 900) + 1001);
     const score = Math.floor((Math.random() * 100) + 1);
 
-    this.afDb.object('stuff' + '/' + category + '/' + id).set({
+    return this.afDb.object('stuff' + '/' + category + '/' + id).set({
       name: name,
       score: score,
       present: score > 2
