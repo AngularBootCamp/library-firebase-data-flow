@@ -1,8 +1,8 @@
 // This component displays a single entry from Firebase on the screen.
 
 import { Component, Input, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
 import { AngularFireDatabase } from 'angularfire2/database';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'one-person',

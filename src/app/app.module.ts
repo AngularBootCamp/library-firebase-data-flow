@@ -4,9 +4,9 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 import { ActivityPanelComponent } from './activityPanel';
-import { PersonListComponent } from './personList';
-import { OnePersonComponent } from './onePerson';
 import { ExampleComponent } from './example';
+import { OnePersonComponent } from './onePerson';
+import { PersonListComponent } from './personList';
 
 export const firebaseConfig = {
   apiKey: '<your-key>',
