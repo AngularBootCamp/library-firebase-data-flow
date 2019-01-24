@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { BrowserModule } from '@angular/platform-browser';
-import { AngularFireModule } from 'angularfire2';
-import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 import { ActivityPanelComponent } from './activityPanel';
 import { ExampleComponent } from './example';
