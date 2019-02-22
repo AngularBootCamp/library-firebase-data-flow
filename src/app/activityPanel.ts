@@ -12,8 +12,8 @@ import { Generator } from './activityGenerator';
 })
 export class ActivityPanelComponent implements OnDestroy {
   n: number = 0;
-  handle: any;
-  enabled: boolean;
+  handle: number;
+  enabled = false;
 
   constructor(g: Generator) {
     this.handle = setInterval(() => {

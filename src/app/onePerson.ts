@@ -13,8 +13,8 @@ import { Observable } from 'rxjs';
   `
 })
 export class OnePersonComponent implements OnInit {
-  @Input() id: string;
-  person: Observable<any>;
+  @Input() id = '';
+  person: Observable<any> | undefined;
 
   constructor(private afDb: AngularFireDatabase) { }
 
