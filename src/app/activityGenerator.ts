@@ -8,17 +8,17 @@ import { AngularFireDatabase } from '@angular/fire/database';
   providedIn: 'root'
 })
 export class Generator {
-  constructor(private afDb: AngularFireDatabase) { }
+  constructor(private afDb: AngularFireDatabase) {}
 
   next() {
-    const category = 'cat' + Math.floor((Math.random() * 3) + 1);
-    const id = 'id' + Math.floor((Math.random() * 10) + 2001);
-    const name = 'Joe' + Math.floor((Math.random() * 900) + 1001);
-    const score = Math.floor((Math.random() * 100) + 1);
+    const category = 'cat' + Math.floor(Math.random() * 3 + 1);
+    const id = 'id' + Math.floor(Math.random() * 10 + 2001);
+    const name = 'Joe' + Math.floor(Math.random() * 900 + 1001);
+    const score = Math.floor(Math.random() * 100 + 1);
 
     return this.afDb.object('stuff' + '/' + category + '/' + id).set({
-      name: name,
-      score: score,
+      name,
+      score,
       present: score > 2
     });
   }

@@ -18,7 +18,12 @@ export const firebaseConfig = {
 };
 
 @NgModule({
-  declarations: [ExampleComponent, ActivityPanelComponent, PersonListComponent, OnePersonComponent],
+  declarations: [
+    ExampleComponent,
+    ActivityPanelComponent,
+    PersonListComponent,
+    OnePersonComponent
+  ],
   imports: [
     BrowserModule,
     AngularFireModule.initializeApp(firebaseConfig),
@@ -26,4 +31,4 @@ export const firebaseConfig = {
   ],
   bootstrap: [ExampleComponent]
 })
-export class AppModule { }
+export class AppModule {}

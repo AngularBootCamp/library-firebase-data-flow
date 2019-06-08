@@ -11,12 +11,12 @@ import { Generator } from './activityGenerator';
   templateUrl: './activityPanel.html'
 })
 export class ActivityPanelComponent implements OnDestroy {
-  n: number = 0;
+  n = 0;
   handle: number;
   enabled = false;
 
   constructor(g: Generator) {
-    this.handle = setInterval(() => {
+    this.handle = window.setInterval(() => {
       if (this.enabled) {
         // void tells tslint that we are intentionally ignoring a promise.
         void g.next();

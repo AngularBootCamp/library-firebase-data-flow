@@ -7,18 +7,20 @@ import { Observable } from 'rxjs';
 @Component({
   selector: 'one-person',
   template: `
-    <b>Person {{id}}:</b>
+    <b>Person {{ id }}:</b>
     <p>{{ person | async | json }}</p>
-    <p>{{ (person | async)?.name}}</p>
+    <p>{{ (person | async)?.name }}</p>
   `
 })
 export class OnePersonComponent implements OnInit {
   @Input() id = '';
   person: Observable<any> | undefined;
 
-  constructor(private afDb: AngularFireDatabase) { }
+  constructor(private afDb: AngularFireDatabase) {}
 
   ngOnInit() {
-    this.person = this.afDb.object('/stuff/cat1/' + this.id).valueChanges();
+    this.person = this.afDb
+      .object('/stuff/cat1/' + this.id)
+      .valueChanges();
   }
 }
