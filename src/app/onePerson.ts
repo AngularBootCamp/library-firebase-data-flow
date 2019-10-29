@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 @Component({
   selector: 'one-person',
   template: `
-    <b>Person {{ id }}:</b>
+    <strong>Person {{ id }}:</strong>
     <p>{{ person | async | json }}</p>
     <p>{{ (person | async)?.name }}</p>
   `
