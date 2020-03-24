@@ -9,7 +9,7 @@ import { debounceTime } from 'rxjs/operators';
     <h4>Person List</h4>
     <ul>
       <li *ngFor="let p of people | async">
-        {{ p['$key'] }} / {{ p.name }} / {{ p.score }}
+        {{ p.name }} / {{ p.score }}
       </li>
     </ul>
   `
